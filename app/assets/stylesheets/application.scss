@@ -10,4 +10,10 @@
 // @import "components/index";
 // @import "bookings/index";
 
+//  External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// Your CSS partials
 @import 'pages/index';
