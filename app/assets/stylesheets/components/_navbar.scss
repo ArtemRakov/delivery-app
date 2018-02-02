@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    }
+}
 
 /* Logo */
 .navbar-delivery-brand img {
@@ -25,7 +25,7 @@
 
 /* Right section */
 .navbar-delivery-right {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     align-self: flex-start;
     display: flex;
     align-items: center;
@@ -35,16 +35,38 @@
 /* Basic navbar item */
 .navbar-delivery-item {
     cursor: pointer;
-    padding: 0 20px;
+    
+    margin-left: 4.5rem;
+    // padding: 10px 22px;
+}
+
+.navbar-delivery-signup {
+    &:visited,
+    &:active,
+    & {
+        border: none !important;
+        border-radius: 5px;
+        padding: 10px 22px;
+        background-color: $color-primary;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: $color-primary-dark;
+    }
+
 }
 
 /* Navbar link */
 .navbar-delivery-link {
-    color: #616668;
-    font-size: 14px;
+    color: $color-white;
+    font-size: 2rem;
+    font-family: $headers-font;
 }
 .navbar-delivery-link:hover {
-    color: #da552f;
+    color: $color-white;
+    border-bottom: 1px solid $color-white;
     text-decoration: none;
 }
 
