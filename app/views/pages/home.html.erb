@@ -1,16 +1,61 @@
-<nav>
-
-</nav>
-
-<main>
-    <section>
-        <div class="home-banner">
-            <div class="home-banner__content">
-                <h1 class="home-banner__text">
-                    Любимый макдональдс у вашей двери.
-                </h1>
-                <a href="#" class="home-banner__btn"> Меню </a>
+<header>
+    <div class="home-banner">
+        <nav>
+            <div class="navbar-delivery">
+                <!-- Logo -->
+                <a href="/" class="navbar-delivery-brand">
+                    <%= image_tag 'logo.png' %>
+                </a>
+            
+                <!-- Right Navigation -->
+                <div class="navbar-delivery-right hidden-xs hidden-sm">
+            
+                    <a href="" class="navbar-delivery-item navbar-delivery-link">Host</a>
+                    <a href="" class="navbar-delivery-item navbar-delivery-link">Trips</a>
+                    <a href="" class="navbar-delivery-item navbar-delivery-link">Messages</a>
+            
+                    <!-- Profile picture with dropdown list -->
+                    <div class="navbar-delivery-item">
+                        <div class="dropdown">
+                            <ul class="dropdown-menu dropdown-menu-right navbar-delivery-dropdown-menu">
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Dropdown appearing on mobile only -->
+                <div class="navbar-delivery-item hidden-md hidden-lg">
+                    <div class="dropdown">
+                        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+                        <ul class="dropdown-menu dropdown-menu-right navbar-delivery-dropdown-menu">
+                            <li>
+                                <a href="#">Host</a>
+                            </li>
+                            <li>
+                                <a href="#">Trips</a>
+                            </li>
+                            <li>
+                                <a href="#">Messagese</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </nav>
+        <div class="home-banner__content">
+            <h1 class="home-banner__text">
+                <span class="home-banner__text-p1"> Любимый макдонладс </span> <span class="home-banner__text-p2"> у вашей двери. </span> 
+            </h1>
+            <a href="#" class="home-banner__btn"> Меню </a>
         </div>
-    </section>
-</main>
+    </div>
+</header>

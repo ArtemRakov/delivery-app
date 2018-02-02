@@ -1,16 +1,53 @@
 .home-banner {
     background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(big-tasty-landing.jpg);
     background-size: cover;
-    height: 70vh;
+    height: 90vh;
+    position: relative;
+
     &__content {
-        
+        position: absolute;
+        top: 55%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__text {
+        font-family: $headers-font;
+        color: #fff;
+        font-weight: 700;
+        font-size: 5rem;
+        
+        &-p1 {
+            display: block;
+        }
 
+        &-p2 {
+            display: block;
+            margin-top: 1.5rem;
+        }
     }
 
     &__btn {
+        margin-top: 5rem;
+
+        &:link,
+        &:visited,
+        & {
+            display: inline-block;
+            padding: 1.5rem 6.5rem;
+            text-transform: uppercase;
+            background-color: $color-primary;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 300;
+            font-family: $headers-font;
+            border-radius: 5px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
 
     }
 }

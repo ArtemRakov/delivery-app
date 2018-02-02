@@ -7,7 +7,7 @@
 
 // // Your CSS partials
 // @import "layouts/index";
-// @import "components/index";
+@import 'variables/index';
 // @import "bookings/index";
 
 //  External libraries
@@ -15,7 +15,7 @@
 @import "bootstrap";
 
 
-// Your CSS partials
-@import 'variables/index';
+// Your CSS pages
+@import "components/index";
 @import 'pages/index';
 
