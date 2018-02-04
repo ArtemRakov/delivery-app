@@ -1,3 +1,15 @@
+
+
+
+h1, h2{
+    font-family: $headers-font;
+}
+
+p {
+    font-family: $body-font;
+}
+
+
 .home-banner {
     background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(big-tasty-landing.jpg);
     background-size: cover;
@@ -15,7 +27,6 @@
     }
 
     &__text {
-        font-family: $headers-font;
         color: $color-white;
         font-weight: 700;
         font-size: 5rem;

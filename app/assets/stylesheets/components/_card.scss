@@ -1,0 +1,49 @@
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    padding: 2rem 4rem;
+    margin: 2rem 4rem;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+
+    &__img {
+        height: 12.5rem;
+    }
+
+    &__like-btn {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.8rem 4rem;
+        border: 1px solid $color-border;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        color: $color-grey-dark-1;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+
+    &__text {
+        text-align: center;
+        color: $color-grey-light;
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+        font-weight: 300;
+    }
+}
+
+.card-red {
+    background-color: #D23333;
+    border: none;
+
+    &__like-btn {
+        border: none;
+        background-color: #EDADAD;
+        color: $color-white;
+    }
+
+    &__text {
+        color: $color-white;
+    }
+}

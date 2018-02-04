@@ -64,38 +64,32 @@
 
 <main>
     <section class="best-service">
-        <div class="text-center">
+        <div class="text-center margin-bottom-lg">
             <h2 class="heading-secondary"> Лучшая служба доставки </h2>
         </div>
-        <div class="best-service__cards my-container">
-            <div class="row">
+        <div class="my-container">
+            <div class="row row-eq">
                 <div class="card col-xs-12 col-md-4">
                     <%= image_tag 'car.png', class: "card__img" %>
-                    <div class="card__btn-like">
-                        <p> Быстро </p>
-                    </div>
+                    <p class="card__like-btn"> Быстро </p>
                     <p class="card__text">
                         Мы доставим ваш заказ за 60 минут или мы вернем вам деньги
                     </p>
                 </div>
 
-                <div class="card col-xs-12 col-md-4">
-                    <%= image_tag 'car.png', class: "card__img" %>
-                    <div class="card__btn-like">
-                        <p> Быстро </p>
-                    </div>
-                    <p class="card__text">
-                        Мы доставим ваш заказ за 60 минут или мы вернем вам деньги
+                <div class="card card-red col-xs-12 col-md-4">
+                    <%= image_tag 'burger.png', class: "card__img" %>
+                    <p class="card__like-btn card-red__like-btn"> Вкусно </p>
+                    <p class="card__text card-red__text">
+                        Еда будет теплой и вкусной такой же, как и в самом макдоналдсе
                     </p>
                 </div>
 
                 <div class="card col-xs-12 col-md-4">
-                    <%= image_tag 'car.png', class: "card__img" %>
-                    <div class="card__btn-like">
-                        <p> Быстро </p>
-                    </div>
+                    <%= image_tag 'credit.png', class: "card__img" %>
+                    <p class="card__like-btn"> Удобно </p>
                     <p class="card__text">
-                        Мы доставим ваш заказ за 60 минут или мы вернем вам деньги
+                        Можно заплатить картой на сайте или наличными курьеру , как вам удобнее
                     </p>
                 </div>
             </div>
