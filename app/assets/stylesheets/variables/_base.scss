@@ -57,6 +57,7 @@ html {
     // }
 }
 
+
 .margin-bottom-lg {
     margin-bottom: 5rem;
 }
@@ -72,3 +73,11 @@ html {
 .row-eq {
     display: flex;
 }
+
+.flex-center {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+}
+
+

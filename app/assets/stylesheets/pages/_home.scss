@@ -79,5 +79,49 @@ p {
 .best-service {
     padding-top:  5rem;
     padding-bottom: 10rem;
+}
 
+.delivery {
+    padding-top:  5rem;
+    padding-bottom: 10rem;
+    background-color: $color-grey-background;
+    
+    &__info-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__img-3 {
+        height: 8rem;
+        margin-right: 1.2rem;
+
+    }
+
+    &__img-1 {
+        height: 8rem;
+        margin-right: 0.5rem;
+
+    }
+
+     &__img-2 {
+        height: 8rem;
+        margin-right: 3rem;
+
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 300;
+        // text-align: center;
+    }
+
+    &__picture {
+        height: 27rem;
+    }
+
+    &__picture-box {
+        display: flex;
+        justify-content: center;
+    }
 }
