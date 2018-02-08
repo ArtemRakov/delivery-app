@@ -15,7 +15,7 @@
         height: 100%;
         bottom: 0;
         left: 20px;
-        background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+        background-image: linear-gradient(to bottom, $color-primary-light 0%, $color-primary-light 100%);
     }
 
 
@@ -29,22 +29,28 @@
     }
 
     &__item {
-        // margin-left: 15rem;
+        position: relative;
         &:not(:last-child) {
             margin-bottom: 15rem;
         }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        bottom: 0;
+        left: 11px;
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, $color-primary 0%, $color-primary 100%);
     }
 
     &__number {
 
     }
 
-    &__line {
-        height: -webkit-fill-available;
-        height: fill-available;
-        width: 2px;
-        background-color: red;
-    }  
 
     &__text {
         font-size: 2.2rem;
