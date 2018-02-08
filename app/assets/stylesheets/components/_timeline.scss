@@ -1,0 +1,66 @@
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    // align-items: center;
+
+    &__box {
+        position: relative;
+    }
+
+    &__box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        bottom: 0;
+        left: 20px;
+        background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+    }
+
+
+    &__content {
+        display: flex;
+        // justify-content: center;
+        margin-left: 20rem;
+        // margin-right: 2rem;
+        align-items: center;
+        width: 600px;
+    }
+
+    &__item {
+        // margin-left: 15rem;
+        &:not(:last-child) {
+            margin-bottom: 15rem;
+        }
+    }
+
+    &__number {
+
+    }
+
+    &__line {
+        height: -webkit-fill-available;
+        height: fill-available;
+        width: 2px;
+        background-color: red;
+    }  
+
+    &__text {
+        font-size: 2.2rem;
+        text-align: center;
+        // flex: 0 0 300px;
+        margin-bottom: 0;
+    }
+
+    &__image {
+        height: 10rem;
+        margin-right: 5rem;
+
+    }
+
+    &__header {
+        margin-top: 0;
+        text-align: center;
+    }
+}

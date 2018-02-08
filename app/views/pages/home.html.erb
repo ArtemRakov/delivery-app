@@ -101,13 +101,33 @@
             <h2 class="heading-secondary"> КАК ПРОХОДИТ ЗАКАЗ </h2>
         </div>
         <div class="my-container">
-            <div class="row row-eq">
-                <div class="delivery__item">
-                    <div class="delivery__number">
-    
+            <div class="timeline">
+                <div class="timeline__box">
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <%= image_tag 'mouse-cursor.png', class: 'timeline__image' %>
+                            <p class="timeline__text">
+                                Оформите заказ на сайте и оплатите удобным вам способом
+                            </p>
+                        </div>
                     </div>
-                    <div class="delivery__info-box">
-                        
+
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <%= image_tag 'shop-bag.png', class: 'timeline__image' %>
+                                <p class="timeline__text">
+                                     Мы получаем ваш заказ и забираем его с макдональса и везем к вам
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <%= image_tag 'cutlery.png', class: 'timeline__image' %>
+                                <p class="timeline__text">
+                                    Вы получаете заказ и наслаждаетесь едой
+                                </p>
+                        </div>
                     </div>
                 </div>
             </div>
