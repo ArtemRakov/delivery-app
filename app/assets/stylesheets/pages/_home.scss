@@ -88,3 +88,36 @@ p {
 
 
 }
+
+
+.price {
+    padding-top:  5rem;
+    padding-bottom: 15rem;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card {
+        width: inherit;
+        padding: 1rem 12rem;
+    }
+
+    &__img {
+        height: 18rem; 
+    }
+
+    &__like-btn {
+        padding: 0.8rem 10rem;
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+}
