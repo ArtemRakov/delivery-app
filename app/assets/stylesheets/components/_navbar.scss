@@ -2,9 +2,11 @@
 .navbar-delivery {
     padding-top: 2rem;
     // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+
     background: transparent;
+
     transition: all 0.3s ease;
-    height: 100px;
+    height: 90px;
     padding: 0px 30px;
     display: flex;
     align-items: center;
@@ -16,6 +18,11 @@
     height: 80px;
 }
 
+.navbar-delivery-brand {
+    border: none !important;
+}
+
+
 /* User Avatar */
 .navbar-delivery .avatar {
     height: 35px;
@@ -25,8 +32,8 @@
 
 /* Right section */
 .navbar-delivery-right {
-    margin-top: 1.5rem;
-    align-self: flex-start;
+    // margin-top: 1.5rem;
+    // align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +42,7 @@
 /* Basic navbar item */
 .navbar-delivery-item {
     cursor: pointer;
-    
+
     margin-left: 4.5rem;
     // padding: 10px 22px;
 }
@@ -47,12 +54,14 @@
         border: none !important;
         border-radius: 5px;
         padding: 12px 22px;
+        color: $color-white !important;
         background-color: $color-primary;
         transition: all 0.2s;
     }
 
     &:hover {
         text-decoration: none;
+        color: $color-white !important;
         background-color: $color-primary-dark;
     }
 
@@ -100,3 +109,20 @@
     border-left: 1px solid #E6E6E6;
     border-top: 1px solid #E6E6E6;
 }
+
+
+.navbar-delivery-white {
+    background-color: $color-white;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+
+
+    a {
+        color: #616668;
+    }
+
+    a:hover {
+        color: #616668;
+        border-bottom: 1px solid #616668;
+    }
+}
+

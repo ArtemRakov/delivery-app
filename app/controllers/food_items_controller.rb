@@ -1,27 +1,28 @@
 class FoodItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
 
-    def index
-        
-    end
+  def index
 
-    def create
+  end
 
-    end
+  def create
 
-    def new
+  end
 
-    end
+  def new
 
-    def edit
+  end
 
-    end
+  def edit
 
-    def update
+  end
 
-    end
+  def update
 
-    def destroy
+  end
 
-    end
+  def destroy
+
+  end
 
 end

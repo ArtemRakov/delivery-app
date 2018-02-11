@@ -1,63 +1,11 @@
 <header>
     <div class="home-banner" style="background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "big-tasty-landing.jpg" %>);">
-        <nav>
-            <div class="navbar-delivery">
-                <!-- Logo -->
-                <a href="/" class="navbar-delivery-brand">
-                    <%= image_tag 'logo.png' %>
-                </a>
-
-                <!-- Right Navigation -->
-                <div class="navbar-delivery-right hidden-xs hidden-sm">
-
-                    <a href="" class="navbar-delivery-item navbar-delivery-link">О нас</a>
-                    <a href="" class="navbar-delivery-item navbar-delivery-link">Доставка</a>
-                    <a href="" class="navbar-delivery-item navbar-delivery-link">Стоймость</a>
-                    <a href="" class="navbar-delivery-item navbar-delivery-link">Вход</a>
-                    <a href="" class="navbar-delivery-item navbar-delivery-link navbar-delivery-signup">Регистрация</a>
-
-                    <!-- Profile picture with dropdown list -->
-                    <div class="navbar-delivery-item">
-                        <div class="dropdown">
-                            <ul class="dropdown-menu dropdown-menu-right navbar-delivery-dropdown-menu">
-                                <li>
-                                    <a href="#">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#">Log Out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown appearing on mobile only -->
-                <div class="navbar-delivery-item hidden-md hidden-lg">
-                    <div class="dropdown">
-                        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-                        <ul class="dropdown-menu dropdown-menu-right navbar-delivery-dropdown-menu">
-                            <li>
-                                <a href="#">Host</a>
-                            </li>
-                            <li>
-                                <a href="#">Trips</a>
-                            </li>
-                            <li>
-                                <a href="#">Messagese</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <%= render 'shared/navbar' %>
         <div class="home-banner__content">
             <h1 class="home-banner__text">
                 <span class="home-banner__text-p1"> Любимый макдоналдс </span> <span class="home-banner__text-p2"> у вашей двери. </span>
             </h1>
-            <a href="#" class="home-banner__btn"> Меню </a>
+            <%= link_to "Меню", menu_path, class: "home-banner__btn" %>
         </div>
     </div>
 </header>
