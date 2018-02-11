@@ -10,5 +10,11 @@ RSpec.describe FoodItem, type: :model do
       expect(@food_item).to be_valid
     end
 
+    it "can not be created without name and price" do
+      @food_item.name = nil
+      @food_item.price = nil
+      expect(@food_item).to_not be_valid
+    end
+
   end
 end
