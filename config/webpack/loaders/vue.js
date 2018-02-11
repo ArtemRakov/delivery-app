@@ -9,10 +9,5 @@ module.exports = {
   use: [{
     loader: 'vue-loader',
     options: { extractCSS }
-  }],
-  // resolve: {
-  //   alias: {
-  //     vue: 'vue/dist/vue.js'
-  //   }
-  // }
+  }]
 }
