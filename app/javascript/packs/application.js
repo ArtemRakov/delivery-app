@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
 document.addEventListener('DOMContentLoaded', function() {
