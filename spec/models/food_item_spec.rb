@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe FoodItem, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Creation" do
+    before do
+      @food_item = FactoryBot.create(:food_item)
+    end
+
+    it 'can be created' do
+      expect(@food_item).to be_valid
+    end
+
+  end
 end

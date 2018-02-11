@@ -32,6 +32,10 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.0'
   gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'launchy'
 end
 
 group :development do
