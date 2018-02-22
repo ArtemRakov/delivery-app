@@ -1,14 +1,18 @@
-.menu {
-    &__navbar {
-
-    }
-
+.menu-navbar {
     &__list > li {
         display: inline-block;
     }
 
-    &__navbar_item {
-        margin: 20px 30px;
+    &__list {
+        margin-bottom: 0;
+    }
+
+    &__item {
+        margin: 2rem 3rem;
+
+        &:first-child {
+            margin-left: 8rem;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -22,4 +26,20 @@
             color: $color-primary;
         }
     }
+}
+
+.menu-navbar-fixed {
+    position: sticky;
+    // position: fixed;
+    width: 100%;
+    top: 0;
+    transform: translateZ(0);
+    z-index: 10;
+    background-color: $color-white;
+}
+
+
+.menu {
+    height: 200vh;
+    background-color: $color-grey-background;
 }
