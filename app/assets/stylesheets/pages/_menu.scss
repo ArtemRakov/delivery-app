@@ -1,0 +1,25 @@
+.menu {
+    &__navbar {
+
+    }
+
+    &__list > li {
+        display: inline-block;
+    }
+
+    &__navbar_item {
+        margin: 20px 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+        font-size: 1.8rem;
+        & > a {
+            text-decoration: none;
+            color: $color-grey-dark-1;
+        }
+
+        & > a:hover {
+            color: $color-primary;
+        }
+    }
+}
