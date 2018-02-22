@@ -1,7 +1,7 @@
 <template>
     <div style="position: relative">
         <div class="menu-navbar-fixed">
-            <div class="container-fluid">
+            <div class="my-container-fluid">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="menu-navbar">

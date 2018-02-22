@@ -10,9 +10,7 @@
     &__item {
         margin: 2rem 3rem;
 
-        &:first-child {
-            margin-left: 8rem;
-        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -42,4 +40,11 @@
 .menu {
     height: 200vh;
     background-color: $color-grey-background;
+}
+
+.my-container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 50px;
+    padding-right: 50px;
 }
