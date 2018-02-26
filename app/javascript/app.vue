@@ -1,9 +1,9 @@
 <template>
     <div style="position: relative">
         <div class="menu-navbar-fixed">
-            <div class="my-container-fluid">
+            <div class="my-container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                         <div class="menu-navbar">
                             <ul class="menu-navbar__list">
                                 <li class="menu-navbar__item">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="basket__container">
                             <div class="basket">
                                 <a href="#" class="basket__btn"> Сделать заказ </a>
@@ -43,14 +43,19 @@
         </div>
 
         <div class="menu">
-            <div class="my-container-fluid">
+            <div class="my-container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-8">
+                        <div class="menu__category">
+                            <h4 class="menu__category-text"> Сандвичи </h4>
+                        </div>
                         <div class="menu__items">
-                            <div class="menu-card">
-                                <img src="" alt="" class="menu-card__img">
-                                <p class="menu-card__name"> Картофель фри </p>
-                                <p class="menu-card__price"> 50 ₽  </p>
+                            <div class="menu-card" v-for="item in items" :key="item.id">
+                                <img :src="item.photo" alt="" class="menu-card__img">
+                                <div class="menu-card__info">
+                                    <p class="menu-card__name"> {{ item.name }}</p>
+                                    <p class="menu-card__price"> {{ item.price }} ₽  </p>
+                                </div>
                             </div>
                         </div>
                     </div>
