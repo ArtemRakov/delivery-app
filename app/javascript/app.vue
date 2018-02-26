@@ -37,9 +37,9 @@
                                 <a href="#" class="basket__btn"> Сделать заказ </a>
                                 <div class="basket__item" v-for="(value) in basket" :key="'kappa' + value.id"> 
                                      <!-- doing weird key so that key will not be the same as menu items -->
-                                    <img src="../assets/images/minus-red.png" alt="" class="basket__img">
+                                    <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
                                     <p class="basket__quantity"> {{ value.quantity }} </p>
-                                    <img src="../assets/images/plus-red.png" alt="" class="basket__img">
+                                    <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
                                     <p class="basket__name"> {{ value.name }}  </p>
                                     <p class="basket__price"> {{ value.price }} ₽</p>
                                 </div>
@@ -99,6 +99,17 @@ export default {
                 var found = this.basket.find( e => e.name === item.name )
                 found.quantity += 1
             }
+        },
+        removeQuantity(item) {
+            item.quantity -= 1
+            var index = this.basket.indexOf(item)
+            if (item.quantity < 1) {
+                this.basket.splice(index, 1)
+            }
+        },
+
+        addQuantity(item) {
+            item.quantity += 1
         }
     }
 }
