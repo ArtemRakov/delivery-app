@@ -9,9 +9,9 @@
 
     &__container {
         max-width: 45rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center; 
         position: relative;
         margin-top: 1px;
     }
@@ -36,5 +36,40 @@
             text-decoration: none;
             background-color: $color-primary-dark;
         }
+    }
+
+
+
+
+    &__item {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;        
+    }
+
+
+    &__img {
+        height: 2rem;
+    }
+
+    &__quantity {
+        margin: 0 1.5rem;
+        font-size: 1.6rem;
+        color: #9A9D9D;
+    }
+
+
+    &__price {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+
+
+    &__name {
+        margin-left: 3rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+        margin-right: auto;
     }
 }
