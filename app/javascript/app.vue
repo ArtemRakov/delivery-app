@@ -83,27 +83,19 @@ export default {
     },
     methods: {
         addItemToBusket(item) {
-            // this.basket[item.name] === undefined
             var index = this.basket.findIndex(x => x.name === item.name);
             if (index === -1) {
                 this.basket.push({id: item.id, name: item.name, price: item.price, quantity: 1 })
-                // this.$set(this.basket, item.name, {id: item.id, name: item.name, price: item.price, quantity: 1 })
             }
             else {
-                // var key = this.basket[item.name]
-                // var quantity = item.quantity + 1
-                // this.basket = Object.assign({}, this.basket, {
-                //     key: {id: item.id, name: item.name, price: item.price, quantity: quantity}
-                // })
-                // console.log(item)
                 var found = this.basket.find( e => e.name === item.name )
                 found.quantity += 1
             }
         },
         removeQuantity(item) {
             item.quantity -= 1
-            var index = this.basket.indexOf(item)
             if (item.quantity < 1) {
+                var index = this.basket.indexOf(item)
                 this.basket.splice(index, 1)
             }
         },
