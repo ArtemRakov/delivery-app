@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.0.6'
+# gem 'carrierwave', '~> 1.2'
 
 
 
@@ -33,7 +34,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
-  gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'launchy'
 end

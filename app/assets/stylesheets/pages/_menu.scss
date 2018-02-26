@@ -8,7 +8,7 @@
     }
 
     &__item {
-        margin: 2rem 3rem;
+        margin: 2rem;
 
 
         &:last-child {
@@ -38,8 +38,8 @@
 
 
 .menu {
-    height: 200vh;
     background-color: $color-grey-background;
+    height: 200vh;
 }
 
 .my-container-fluid {

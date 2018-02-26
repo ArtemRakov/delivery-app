@@ -43,7 +43,19 @@
         </div>
 
         <div class="menu">
-
+            <div class="my-container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="menu__items">
+                            <div class="menu-card">
+                                <img src="" alt="" class="menu-card__img">
+                                <p class="menu-card__name"> Картофель фри </p>
+                                <p class="menu-card__price"> 50 ₽  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

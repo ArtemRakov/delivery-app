@@ -10,6 +10,9 @@ puts "Clearning db"
 FoodItem.destroy_all
 
 puts "Creating food items"
-FoodItem.create(name: "Биг Мак", price: 150);
-FoodItem.create(name: "Картофель Фри", price: 80);
-FoodItem.create(name: "Чикен Нагетс", price: 200);
+FoodItem.create(name: "Биг Мак", price: 150, category: "sandwich", photo: "./assets/mcdonalds/big_mac.png");
+FoodItem.create(name: "Картофель Фри", price: 80, category: "fries", photo: "./assets/mcdonalds/fries.png");
+# FoodItem.create(name: "Чикен Нагетс", price: 200);
+
+
+# img src="./assets/mcdonalds/big_mac.png" alt=""> -->
