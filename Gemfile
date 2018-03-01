@@ -21,7 +21,6 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.0.6'
-# gem 'carrierwave', '~> 1.2'
 
 
 
