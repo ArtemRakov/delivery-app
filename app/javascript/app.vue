@@ -115,7 +115,8 @@ export default {
         },
 
         getPic(url) {
-            return './assets/' + url + '.png';
+            // return './assets/' + url + '.png';
+            return require(`../assets/images/${url}.png`)
         },
 
         setColor(item) {
