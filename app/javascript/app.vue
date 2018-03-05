@@ -63,6 +63,7 @@
                                 <div class="menu-card__info">
                                     <p class="menu-card__name"> {{ item.name }}</p>
                                     <p class="menu-card__price"> {{ item.price }} ₽  </p>
+                                    {{ basket }}
                                 </div>
                             </div>
                         </div>
@@ -78,25 +79,35 @@ export default {
     props: ['items'],
     data() {
         return {
-            basket: []
+            basket: {}
         }
     },
     methods: {
         addItemToBusket(item) {
-            var index = this.basket.findIndex(x => x.name === item.name);
-            if (index === -1) {
-                this.basket.push({id: item.id, name: item.name, price: item.price, quantity: 1 })
+            var key = item.id
+            if (this.basket[key] == undefined) {
+                this.$set(this.basket, key, { id: item.id, name: item.name, price: item.price, quantity: 1 })
             }
             else {
-                var found = this.basket.find( e => e.name === item.name )
-                found.quantity += 1
+                this.basket[key].quantity += 1 
             }
+            //                          FOR ARRAY busket
+            // var index = this.basket.findIndex(x => x.name === item.name);
+            // if (index === -1) {
+            //     this.basket.push({id: item.id, name: item.name, price: item.price, quantity: 1 })
+            // }
+            // else {
+            //     var found = this.basket.find( e => e.name === item.name )
+            //     found.quantity += 1
+            // }
+
+
+
         },
         removeQuantity(item) {
             item.quantity -= 1
             if (item.quantity < 1) {
-                var index = this.basket.indexOf(item)
-                this.basket.splice(index, 1)
+                delete this.basket[item.id]
             }
         },
 
