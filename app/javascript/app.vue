@@ -105,7 +105,7 @@ export default {
         },
 
         getPic(url) {
-            return '../assets/mcdonalds/' + url + '.png';
+            return '../assets/' + url + '.png';
         }
     }
 }
