@@ -31,6 +31,7 @@
                         </div>
                     </div>
 
+
                     <div class="col-md-4">
                         <div class="basket__container">
                             <div class="basket">
@@ -58,7 +59,33 @@
                             <h4 class="menu__category-text"> Сандвичи </h4>
                         </div>
                         <div class="menu__items">
-                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in items" :key="item.id" :style="setColor(item)">
+                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in sandwich" :key="item.id" :style="setColor(item)">
+                                <img :src="getPic(item.photo)" alt="" class="menu-card__img">
+                                <div class="menu-card__info">
+                                    <p class="menu-card__name"> <span class="menu-card__quantity" v-if="basket[item.id] != undefined "> {{ basket[item.id].quantity }} x </span> {{ item.name }}</p>
+                                    <p class="menu-card__price"> {{ item.price }} ₽  </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu__category">
+                            <h4 class="menu__category-text"> Картофель </h4>
+                        </div>
+                        <div class="menu__items">
+                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in fries" :key="item.id" :style="setColor(item)">
+                                <img :src="getPic(item.photo)" alt="" class="menu-card__img">
+                                <div class="menu-card__info">
+                                    <p class="menu-card__name"> <span class="menu-card__quantity" v-if="basket[item.id] != undefined "> {{ basket[item.id].quantity }} x </span> {{ item.name }}</p>
+                                    <p class="menu-card__price"> {{ item.price }} ₽  </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu__category">
+                            <h4 class="menu__category-text"> Стартеры </h4>
+                        </div>
+                        <div class="menu__items">
+                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in starters" :key="item.id" :style="setColor(item)">
                                 <img :src="getPic(item.photo)" alt="" class="menu-card__img">
                                 <div class="menu-card__info">
                                     <p class="menu-card__name"> <span class="menu-card__quantity" v-if="basket[item.id] != undefined "> {{ basket[item.id].quantity }} x </span> {{ item.name }}</p>
@@ -75,7 +102,7 @@
 
 <script>
 export default {
-    props: ['items'],
+    props: ['sandwich', 'fries', 'starters'],
     data() {
         return {
             basket: {}
