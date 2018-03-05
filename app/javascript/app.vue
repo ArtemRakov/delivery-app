@@ -59,7 +59,7 @@
                         </div>
                         <div class="menu__items">
                             <div class="menu-card" @click="addItemToBusket(item)" v-for="item in items" :key="item.id">
-                                <img :src="item.photo" alt="" class="menu-card__img">
+                                <img :src="getPic(item.photo)" alt="" class="menu-card__img">
                                 <div class="menu-card__info">
                                     <p class="menu-card__name"> {{ item.name }}</p>
                                     <p class="menu-card__price"> {{ item.price }} ₽  </p>
@@ -102,6 +102,10 @@ export default {
 
         addQuantity(item) {
             item.quantity += 1
+        },
+
+        getPic(url) {
+            return '../assets/mcdonalds/' + url + '.png';
         }
     }
 }
