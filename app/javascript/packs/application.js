@@ -12,18 +12,18 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
 document.addEventListener('DOMContentLoaded', function() {
-  var element = document.querySelector('#food_items')
-  console.log(JSON.parse(element.dataset.sandwich))
-  if (element != undefined) {
-    const app = new Vue({
-      el: element,
-      data: {
-        sandwich: JSON.parse(element.dataset.sandwich),
-        fries: JSON.parse(element.dataset.fries),
-        starters: JSON.parse(element.dataset.starters),
-      },
-      template: "<App :sandwich='sandwich' :fries='fries' :starters='starters' />",
-      components: { App }
-    })
-  }
+    var element = document.querySelector('#food_items')
+    console.log(JSON.parse(element.dataset.sandwich))
+    if (element != undefined) {
+        const app = new Vue({
+        el: element,
+        data: {
+            sandwich: JSON.parse(element.dataset.sandwich),
+            fries: JSON.parse(element.dataset.fries),
+            starters: JSON.parse(element.dataset.starters),
+        },
+        template: "<App :sandwich='sandwich' :fries='fries' :starters='starters' />",
+        components: { App }
+        })
+    }
 })
