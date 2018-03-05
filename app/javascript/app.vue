@@ -58,12 +58,11 @@
                             <h4 class="menu__category-text"> Сандвичи </h4>
                         </div>
                         <div class="menu__items">
-                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in items" :key="item.id">
+                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in items" :key="item.id" :style="setColor(item)">
                                 <img :src="getPic(item.photo)" alt="" class="menu-card__img">
                                 <div class="menu-card__info">
-                                    <p class="menu-card__name"> {{ item.name }}</p>
+                                    <p class="menu-card__name"> <span class="menu-card__quantity" v-if="basket[item.id] != undefined "> {{ basket[item.id].quantity }} x </span> {{ item.name }}</p>
                                     <p class="menu-card__price"> {{ item.price }} ₽  </p>
-                                    {{ basket }}
                                 </div>
                             </div>
                         </div>
@@ -117,6 +116,15 @@ export default {
 
         getPic(url) {
             return '../assets/' + url + '.png';
+        },
+
+        setColor(item) {
+            if (this.basket[item.id] == undefined) {
+                return
+            }
+            else {
+                return 'border-left: 4px solid #D23333'
+            }
         }
     }
 }
