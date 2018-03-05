@@ -7,25 +7,25 @@
                         <div class="menu-navbar">
                             <ul class="menu-navbar__list">
                                 <li class="menu-navbar__item">
-                                <a href="#"> Сандвичи </a> 
+                                    <a href="#"> Сандвичи </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#"> Роллы  </a> 
+                                    <a href="#"> Роллы  </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#"> Картофель  </a> 
+                                    <a href="#"> Картофель  </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#"> Стартеры  </a> 
+                                    <a href="#"> Стартеры  </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#"> Соусы  </a> 
+                                    <a href="#"> Соусы  </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#">  Напитки </a> 
+                                    <a href="#">  Напитки </a> 
                                 </li>
                                 <li class="menu-navbar__item">
-                                <a href="#">  Десерты </a> 
+                                    <a href="#">  Десерты </a> 
                                 </li>
                             </ul>
                         </div>
@@ -126,8 +126,6 @@ export default {
             //     var found = this.basket.find( e => e.name === item.name )
             //     found.quantity += 1
             // }
-
-
 
         },
         removeQuantity(item) {
