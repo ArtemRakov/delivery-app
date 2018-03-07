@@ -42,7 +42,7 @@
                                     <p class="basket__quantity"> {{ value.quantity }} </p>
                                     <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
                                     <p class="basket__name"> {{ value.name }}  </p>
-                                    <p class="basket__price"> {{ value.price }} </p>
+                                    <p class="basket__price"> {{ value.price }} ₽ </p>
                                 </div>
                             </div>
                         </div>
