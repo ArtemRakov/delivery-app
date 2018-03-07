@@ -36,15 +36,20 @@
                         <div class="basket__container">
                             <div class="basket">
                                 <a href="#" class="basket__btn"> Сделать заказ </a>
-                                <div class="basket__item" v-for="(value) in basket" :key="'kappa' + value.id">
+                                <div v-if="Object.keys(basket).length === 0 && basket.constructor === Object" class="basket__empty">
+                                        <p class="basket__empty-text"> <span class="basket__empty-text-1"> Здесь отобразятся блюда, </span>  <span class="basket__empty-text-2"> добавленные в корзину. </span> </p>
+                                </div>
+                                <div v-else class="basket__menu" v-for="(value) in basket" :key="'basket' + value.id">
                                      <!-- doing weird key so that key will not be the same as menu items -->
-                                     <div class="basket__actions">
-                                        <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
-                                        <p class="basket__quantity"> {{ value.quantity }} </p>
-                                        <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
-                                     </div>
-                                    <p class="basket__name"> {{ value.name }}  </p>
-                                    <p class="basket__price"> {{ value.price }} ₽ </p>
+                                    <div class="basket__item">
+                                        <div class="basket__actions">
+                                            <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
+                                            <p class="basket__quantity"> {{ value.quantity }} </p>
+                                            <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
+                                        </div>
+                                        <p class="basket__name"> {{ value.name }}  </p>
+                                        <p class="basket__price"> {{ value.price }} ₽ </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
