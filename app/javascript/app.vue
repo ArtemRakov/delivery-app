@@ -53,15 +53,15 @@
                                                 <p class="basket__price"> {{ value.price }} ₽ </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="basket__prices">
-                                        <div class="basket__goods-box">
-                                            <p class="basket__goods-name"> Цена </p>
-                                            <p class="basket__goods-price"> {{ priceOfGoods }} ₽ </p>
-                                        </div>
-                                        <div class="basket__goods-box">
-                                            <p class="basket__goods-name"> Доставка </p>
-                                            <p class="basket__goods-price"> 200 ₽ </p>
+                                        <div class="basket__prices">
+                                            <div class="basket__goods-box">
+                                                <p class="basket__goods-name"> Цена </p>
+                                                <p class="basket__goods-price"> {{ priceOfGoods }} ₽ </p>
+                                            </div>
+                                            <div class="basket__goods-box">
+                                                <p class="basket__goods-name"> Доставка </p>
+                                                <p class="basket__goods-price"> 200 ₽ </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="basket__total">
