@@ -205,6 +205,33 @@ export default {
         totalPrice() {
             return this.priceOfGoods + 200
         }
+    },
+    watch: {
+        basket: {
+            deep: true,
+            
+            handler(val) {
+                console.log('hello')
+                var stringify = JSON.stringify(this.basket)
+                localStorage.setItem('basket', stringify)
+            }
+        }
+    },
+    mounted() {
+        var retrievedObject = localStorage.getItem('basket')
+        // retrievedObject ? var exist = true : var exist = false
+        if (retrievedObject) {
+            var exist = true
+        }
+        else {
+            var exist = false
+        }
+
+        if (exist) {
+            this.basket = JSON.parse(retrievedObject)
+        }
+        else {
+        }
     }
 }
 </script>
