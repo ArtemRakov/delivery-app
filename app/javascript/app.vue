@@ -41,8 +41,8 @@
                                 </div>
                                 <div v-else class="basket__menu-box">
                                     <div class="basket__menu-list">
+                                        <!-- doing weird key so that key will not be the same as menu items -->
                                         <div class="basket__menu" v-for="(value) in basket" :key="'basket' + value.id">
-                                            <!-- doing weird key so that key will not be the same as menu items -->
                                             <div class="basket__item">
                                                 <div class="basket__actions">
                                                     <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
@@ -211,7 +211,6 @@ export default {
             deep: true,
             
             handler(val) {
-                console.log('hello')
                 var stringify = JSON.stringify(this.basket)
                 localStorage.setItem('basket', stringify)
             }
