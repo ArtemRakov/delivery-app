@@ -39,16 +39,34 @@
                                 <div v-if="Object.keys(basket).length === 0 && basket.constructor === Object" class="basket__empty">
                                         <p class="basket__empty-text"> <span class="basket__empty-text-1"> Здесь отобразятся блюда, </span>  <span class="basket__empty-text-2"> добавленные в корзину. </span> </p>
                                 </div>
-                                <div v-else class="basket__menu" v-for="(value) in basket" :key="'basket' + value.id">
-                                     <!-- doing weird key so that key will not be the same as menu items -->
-                                    <div class="basket__item">
-                                        <div class="basket__actions">
-                                            <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
-                                            <p class="basket__quantity"> {{ value.quantity }} </p>
-                                            <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
+                                <div v-else class="basket__menu-box">
+                                    <div class="basket__menu-list">
+                                        <div class="basket__menu" v-for="(value) in basket" :key="'basket' + value.id">
+                                            <!-- doing weird key so that key will not be the same as menu items -->
+                                            <div class="basket__item">
+                                                <div class="basket__actions">
+                                                    <img src="../assets/images/minus-red.png" alt="" class="basket__img" @click="removeQuantity(value)">
+                                                    <p class="basket__quantity"> {{ value.quantity }} </p>
+                                                    <img src="../assets/images/plus-red.png" alt="" class="basket__img" @click="addQuantity(value)">
+                                                </div>
+                                                <p class="basket__name"> {{ value.name }}  </p>
+                                                <p class="basket__price"> {{ value.price }} ₽ </p>
+                                            </div>
                                         </div>
-                                        <p class="basket__name"> {{ value.name }}  </p>
-                                        <p class="basket__price"> {{ value.price }} ₽ </p>
+                                    </div>
+                                    <div class="basket__prices">
+                                        <div class="basket__goods-box">
+                                            <p class="basket__goods-name"> Цена </p>
+                                            <p class="basket__goods-price"> {{ priceOfGoods }} ₽ </p>
+                                        </div>
+                                        <div class="basket__goods-box">
+                                            <p class="basket__goods-name"> Доставка </p>
+                                            <p class="basket__goods-price"> 200 ₽ </p>
+                                        </div>
+                                    </div>
+                                    <div class="basket__total">
+                                        <p>Всего</p>
+                                        <p> {{ totalPrice }} ₽</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +143,8 @@ export default {
     props: ['sandwich', 'fries', 'starters', 'rolls'],
     data() {
         return {
-            basket: {}
+            basket: {},
+            total: 0
         }
     },
     methods: {
@@ -171,6 +190,20 @@ export default {
             else {
                 return 'border-left: 4px solid #D23333'
             }
+        }
+    }, 
+    computed: {
+        priceOfGoods() {
+            var total = 0
+            Object.keys(this.basket).forEach( (e) => {
+                total += (this.basket[e].price * this.basket[e].quantity)
+            })
+
+            return total
+        },
+
+        totalPrice() {
+            return this.priceOfGoods + 200
         }
     }
 }
