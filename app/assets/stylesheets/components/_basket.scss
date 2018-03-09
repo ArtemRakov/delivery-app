@@ -16,10 +16,13 @@
         margin-top: 1px;
     }
 
+    &__menu-box {
+    }
+
 
     &__menu-list {
         max-height: 60vh;
-        overflow: scroll;
+        overflow-y: auto;
     }
 
     &__empty {
