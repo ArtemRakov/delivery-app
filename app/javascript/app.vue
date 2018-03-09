@@ -156,7 +156,7 @@ export default {
             else {
                 this.basket[key].quantity += 1
             }
-            //                          FOR ARRAY busket
+            //                          FOR ARRAY basket
             // var index = this.basket.findIndex(x => x.name === item.name);
             // if (index === -1) {
             //     this.basket.push({id: item.id, name: item.name, price: item.price, quantity: 1 })
@@ -191,7 +191,7 @@ export default {
                 return 'border-left: 4px solid #D23333'
             }
         }
-    }, 
+    },
     computed: {
         priceOfGoods() {
             var total = 0
@@ -209,7 +209,7 @@ export default {
     watch: {
         basket: {
             deep: true,
-            
+
             handler(val) {
                 var stringify = JSON.stringify(this.basket)
                 localStorage.setItem('basket', stringify)
