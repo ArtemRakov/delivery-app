@@ -7,6 +7,7 @@ class FoodItemsController < ApplicationController
     @rolls = food_items.where(category: 'roll')
     @fries = food_items.where(category: 'fries')
     @starters = food_items.where(category: 'starters')
+    @drinks = food_items.where(category: 'drinks')
   end
 
   def create

@@ -21,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
             fries: JSON.parse(element.dataset.fries),
             starters: JSON.parse(element.dataset.starters),
             rolls: JSON.parse(element.dataset.rolls),
+            drinks: JSON.parse(element.dataset.drinks),
         },
-        template: "<App :sandwich='sandwich' :fries='fries' :starters='starters' :rolls='rolls' />",
+        template: "<App :sandwich='sandwich' :fries='fries' :starters='starters' :rolls='rolls' :drinks='drinks' />",
         components: { App }
         })
     }

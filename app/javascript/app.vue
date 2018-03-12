@@ -131,6 +131,19 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="menu__category">
+                            <h4 class="menu__category-text"> Напитки </h4>
+                        </div>
+                        <div class="menu__items">
+                            <div class="menu-card" @click="addItemToBusket(item)" v-for="item in drinks" :key="item.id" :style="setColor(item)">
+                                <img :src="getPic(item.photo)" alt="" class="menu-card__img">
+                                <div class="menu-card__info">
+                                    <p class="menu-card__name"> <span class="menu-card__quantity" v-if="basket[item.id] != undefined "> {{ basket[item.id].quantity }} x </span> {{ item.name }}</p>
+                                    <p class="menu-card__price"> {{ item.price }} ₽  </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,7 +153,7 @@
 
 <script>
 export default {
-    props: ['sandwich', 'fries', 'starters', 'rolls'],
+    props: ['sandwich', 'fries', 'starters', 'rolls', 'drinks'],
     data() {
         return {
             basket: {},

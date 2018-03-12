@@ -31,6 +31,42 @@ FoodItem.create(name: "Двойной Филе-о-Фиш", price: 154, category:
 FoodItem.create(name: "Фиш Ролл", price: 160, category: "roll", photo: "fish_roll.png") # roll
 
 
+FoodItem.create(name: 'Чикен Макнаггетс 6 шт', price: 105, category: "starters", photo: "mcnaggets_6.png")
+FoodItem.create(name: 'Чикен Макнаггетс 9 шт', price: 150, category: "starters", photo: "mcnaggets_9.png")
+FoodItem.create(name: 'Чикен Макнаггетс 20 шт', price: 272, category: "starters", photo: "mcnaggets_20.png")
+FoodItem.create(name: 'Креветки 4шт', price: 160, category: "starters", photo: "srimp.png")
+FoodItem.create(name: 'Креветки 6шт', price: 224, category: "starters", photo: "srimp.png")
+FoodItem.create(name: 'Креветки 9шт', price: 320, category: "starters", photo: "srimp.png")
+FoodItem.create(name: 'Куриные крылышки 4 шт', price: 131, category: "starters", photo: "chicken_wings.png")
+FoodItem.create(name: 'Куриные крылышки 6 шт', price: 182, category: "starters", photo: "chicken_wings.png")
+FoodItem.create(name: 'Куриные крылышки 9 шт', price: 258, category: "starters", photo: "chicken_wings.png")
+
+
+FoodItem.create(name: 'Картофель фри маленькая порция', price: 44, category: 'fries', photo: 'potato_little.png')
+FoodItem.create(name: 'Картофель фри средняя порция', price: 50, category: 'fries', photo: 'potato_big.png')
+FoodItem.create(name: 'Картофель фри большая порция', price: 75, category: 'fries', photo: 'potato_medium.png')
+FoodItem.create(name: 'Картофель по-деревенски', price: 71, category: 'fries', photo: 'potato_po-derevenski.png')
+
+
+FoodItem.create(name: 'Соус Сырный', price: 20, category: 'sauces', photo: 'cheesy.png')
+FoodItem.create(name: 'Соус Кисло-сладкий', price: 20, category: 'sauces', photo: 'sweet_and_sour.png')
+FoodItem.create(name: 'Кетчуп', price: 20, category: 'sauces', photo: 'ketchup.png')
+FoodItem.create(name: 'Соус 1000 Островов', price: 20, category: 'sauces', photo: '1000_islands.png')
+FoodItem.create(name: 'Соус Барбекю', price: 20, category: 'sauces', photo: 'bbq.png')
+FoodItem.create(name: 'Соус Горчичный', price: 20, category: 'sauces', photo: 'mustard.png')
+FoodItem.create(name: 'Соус Карри', price: 20, category: 'sauces', photo: 'curry-sauce.png')
+
+
+
+
+FoodItem.create(name:  'Кока-Кола 0.5л', price: 100, category: 'drinks', photo: 'cola.png')
+FoodItem.create(name:  'Кока-Кола Зеро 0.5л', price: 100, category: 'drinks', photo: 'cola-zero.png')
+FoodItem.create(name:  'Спрайт 0.5л', price: 100, category: 'drinks', photo: 'sprite.png')
+FoodItem.create(name:  'Фанта 0.5л', price: 100, category: 'drinks', photo: 'fanta.png')
+FoodItem.create(name:  'Минеральная вода Перье 0.5л', price: 100, category: 'drinks', photo: 'perrier.png')
+# FoodItem.create(name:  'Липтон Айс Ти Лемон', price: 100, category: 'drinks', photo: '')
+# FoodItem.create(name:  'Липтон Айс Ти Зеленый чай', price: 100, category: 'drinks', photo: '')
+
 
 puts "Creating rolls"
 
